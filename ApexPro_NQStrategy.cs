@@ -139,23 +139,27 @@ namespace NinjaTrader.NinjaScript.Strategies
         public bool RthOnly { get; set; } = true;
 
         [NinjaScriptProperty]
-        [Display(Name = "Min ADX for Trend", Order = 2, GroupName = "6. Session Filters")]
+        [Display(Name = "ADX Period", Order = 2, GroupName = "6. Session Filters")]
+        public int AdxPeriod { get; set; } = 14;
+
+        [NinjaScriptProperty]
+        [Display(Name = "Min ADX for Trend", Order = 3, GroupName = "6. Session Filters")]
         public double MinAdx { get; set; } = 25;
 
         [NinjaScriptProperty]
-        [Display(Name = "Fast EMA Period", Order = 3, GroupName = "6. Session Filters")]
+        [Display(Name = "Fast EMA Period", Order = 4, GroupName = "6. Session Filters")]
         public int FastEmaPeriod { get; set; } = 21;
 
         [NinjaScriptProperty]
-        [Display(Name = "Slow EMA Period", Order = 4, GroupName = "6. Session Filters")]
+        [Display(Name = "Slow EMA Period", Order = 5, GroupName = "6. Session Filters")]
         public int SlowEmaPeriod { get; set; } = 50;
 
         [NinjaScriptProperty]
-        [Display(Name = "Volume MA Period", Order = 5, GroupName = "6. Session Filters")]
+        [Display(Name = "Volume MA Period", Order = 6, GroupName = "6. Session Filters")]
         public int VolumeMAPeriod { get; set; } = 20;
 
         [NinjaScriptProperty]
-        [Display(Name = "Min Volume Multiplier", Order = 6, GroupName = "6. Session Filters")]
+        [Display(Name = "Min Volume Multiplier", Order = 7, GroupName = "6. Session Filters")]
         public double MinVolumeMultiplier { get; set; } = 1.2; // 120% of average
         #endregion
 

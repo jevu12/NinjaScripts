@@ -45,7 +45,7 @@ namespace NinjaTrader.NinjaScript.Indicators
         public int SignalLength { get; set; }
         
         [NinjaScriptProperty]
-        [Range(1, int.MaxValue)]
+        [Range(30, int.MaxValue)]
         [Display(Name = "Overbought Level", Order = 4, GroupName = "Levels")]
         public double OverboughtLevel { get; set; }
         

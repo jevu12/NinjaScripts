@@ -173,7 +173,7 @@ namespace NinjaTrader.NinjaScript.Indicators
         // Helper method to detect volatility expansion
         public bool IsExpanding()
         {
-            if (CurrentBar < Period + 1)
+            if (CurrentBar < Period + 2)
                 return false;
             
             return bandwidth[0] > bandwidth[1] && bandwidth[1] < bandwidth[2];
