@@ -4,31 +4,45 @@ A collection of custom trading strategies built for NinjaTrader 8 using NinjaScr
 
 📌 Features
 
-Pre-built strategies for futures trading (NQ, ES, YM, etc.).
+**ApexPro_NQStrategy - Advanced Features:**
+- Professional-level indicators (WaveTrend Oscillator, Modified Bollinger Bands)
+- Institutional-grade liquidity and order flow analysis
+- Multi-layer confirmation system for high-probability trades
+- Advanced volatility expansion detection
+- Dynamic position sizing with dual risk limits
+- Complete Apex Trader Funding compliance
+- Session-based risk management
 
-Risk management tools: ATR stops, trailing stops, daily loss limits, auto-flatten logic.
-
-Entry logic examples: moving average crossovers, VWAP pullbacks, RSI conditions, probability toggles.
-
-Modular structure so you can plug in or modify your own setups.
-
-Optimized for prop firm rule-sets (drawdown protection, scaling, max trades/day).
-
-/strategies → NinjaScript .cs files ready to import into NinjaTrader.
-
-Each file includes setup instructions in the header comments.
+**General Features:**
+- Pre-built strategies for futures trading (NQ, ES, YM, etc.)
+- Risk management tools: ATR stops, trailing stops, daily loss limits
+- Auto-flatten logic for prop firm compliance
+- Entry logic examples: moving averages, momentum indicators, volume filters
+- Modular structure for easy customization
+- Optimized for prop firm evaluations (Apex, TopStep, etc.)
 
 ⚡ Installation
 
-Open NinjaTrader 8.
+**For ApexPro_NQStrategy (Advanced):**
 
-Go to Tools → Import → NinjaScript Add-On.
+1. Download these 3 files:
+   - `ApexPro_NQStrategy.cs` (main strategy)
+   - `WaveTrendOscillator.cs` (custom indicator)
+   - `BollingerBandsModified.cs` (custom indicator)
 
-Select the .cs file(s) from this repository.
+2. Open NinjaTrader 8 → Tools → Import → NinjaScript Add-On
 
-Compile the script inside the NinjaScript Editor.
+3. Import each file one at a time
 
-Apply the strategy to a chart.
+4. Compile: Tools → NinjaScript Editor → F5
+
+5. Apply to chart: Right-click chart → Strategies → Add → ApexPro_NQStrategy
+
+6. **See [Quick Start Guide](QUICK_START.md) for detailed setup**
+
+**For Other Strategies:**
+
+Open NinjaTrader 8 → Tools → Import → NinjaScript Add-On → Select .cs file → Compile (F5) → Apply to chart
 
 🛠 Usage
 
@@ -38,15 +52,24 @@ Adjust parameters (ATR period, stop loss, profit target, etc.) in the properties
 
 Enable live simulation or real trading (at your own risk).
 
-📖 Example Strategies
+📖 Available Strategies
 
-ATRStopStrategy → Uses Average True Range to set dynamic stops.
+**ApexPro_NQStrategy** (NEW) → Advanced institutional-grade strategy for Apex Trader Funding evaluations
+- WaveTrend Oscillator for momentum confirmation
+- Modified Bollinger Bands for volatility expansion
+- Liquidity zone analysis and order flow dynamics
+- Multi-layer entry confirmation system
+- Dynamic position sizing with ATR-based stops
+- Complete Apex compliance (daily guards, flat-before-close)
+- Optimized for NQ futures on 1-5 minute timeframes
+- [📘 Full Documentation](APEXPRO_DOCUMENTATION.md) | [⚡ Quick Start Guide](QUICK_START.md)
 
-VWAPPullbackStrategy → Buys pullbacks into VWAP with defined exits.
-
-PropFirmRiskControl → Enforces daily loss limits and auto-flattens trades.
-
-ScalpingExample → Tick-based micro scalping system for NQ futures.
+**ApexNQ_EvalGuard** → Conservative strategy with Apex evaluation risk guards
+- ATR-based stops with EMA/ADX trend filtering
+- Daily loss cap and profit lock protections
+- Flat-before-close automation
+- Per-trade risk sizing
+- Simple, proven approach for passing evaluations
 
 ⚠️ Disclaimer
 
